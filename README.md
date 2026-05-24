@@ -1,10 +1,4 @@
-# AnchorSteer
-
-**AnchorSteer: Self-Discovered Concept Injection for Structure-Preserving Music Editing**
-
-[[arXiv TBD]](arXiv TBD) | [[KDD '26 TBD]](KDD '26 TBD) | [[Demo TBD]](Demo TBD)
-
----
+# AnchorSteer: Self-Discovered Concept Injection for Structure-Preserving Music Editing
 
 ## Abstract
 
@@ -60,20 +54,20 @@ This step is only required for `edit.py`. Plain concept steering via `generate.p
 ## Quick start: Steering-only inference
 
 ### 1. Download pre-trained concept checkpoints
+ 
+The pre-trained concept checkpoints are hosted on Hugging Face: [heng1024/AnchorSteer-weights](https://huggingface.co/heng1024/AnchorSteer-weights) (DOI: [10.57967/hf/8920](https://doi.org/10.57967/hf/8920))
 
-> Download link: `[TBD]`
->
-> ```bash
-> gdown [TBD]
-> ```
-
-### 2. Extract to `exps/`
+From the root directory of this repository, download the checkpoints:
 
 ```bash
-unzip checkpoints.zip -d exps/
+hf download heng1024/AnchorSteer-weights --repo-type model --include "exps/*" --local-dir .
 ```
 
-### 3. Run inference
+This places the `exps/` folder directly into the repo root, matching the expected layout.
+
+We provide 5 pre-trained concept checkpoints: `rock`, `jazz`, `piano`, `harp`, `ambient`. In the following example, we use rock as an example, but it can be replaced with any of the other four concepts.
+
+### 2. Run inference
 
 ```bash
 python generate.py --exp_dir exps/rock-transformer
@@ -81,7 +75,7 @@ python generate.py --exp_dir exps/rock-transformer
 
 Defaults: 3 samples, prompt `"a music piece"`. Override with `--num_sample N` and `--prompt "your prompt"`.
 
-### 4. Expected output
+### 3. Expected output
 
 Six WAV files will be written to `exps/rock-transformer/best/`:
 - `a music piece_0_orig.wav` … `a music piece_2_orig.wav` — original (unsteered) generations
@@ -100,7 +94,7 @@ python edit.py \
     --concept_dir exps/rock-transformer
 ```
 
-> **Prerequisites:** complete Installation steps 1–4, including the MuseControlLite checkpoint download.
+> **Prerequisites:** complete Installation steps 1–3, including the MuseControlLite checkpoint download.
 
 The edited WAV is written to `outputs/<source_stem>_rock-transformer.wav`.
 
@@ -251,8 +245,7 @@ If you use AnchorSteer in your research, please cite:
   title     = {AnchorSteer: Self-Discovered Concept Injection for Structure-Preserving Music Editing},
   author    = {Chih-Heng Chang, Keng-Seng Ho, Chih-Yu Tsai, Kuan-Lin Chen, Yi-Hsuan Yang, Jian-Jiun Ding},
   booktitle = {Proceedings of the 32nd ACM SIGKDD Conference on Knowledge Discovery and Data Mining V.2},
-  year      = {2026},
-  note      = {[arXiv TBD]}
+  year      = {2026}
 }
 ```
 
