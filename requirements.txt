@@ -1,0 +1,32 @@
+torch
+torchaudio
+torchvision
+numpy
+albumentations
+diffusers
+gradio
+opencv-python
+pudb
+invisible-watermark
+imageio
+imageio-ffmpeg
+test-tube
+einops
+torch-fidelity
+transformers==4.46.1
+torchmetrics
+kornia
+scikit-learn
+torchsde
+torchcodec
+ruamel.yaml
+-e git+https://github.com/CompVis/taming-transformers.git@master#egg=taming-transformers
+-e git+https://github.com/openai/CLIP.git@main#egg=clip
+
+git+https://github.com/YianLai0327/madmom.git
+soundfile
+accelerate
+matplotlib
+librosa
+gdown
+wandb

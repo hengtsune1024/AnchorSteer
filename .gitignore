@@ -1,0 +1,26 @@
+# Generated experiment outputs
+exps/
+outputs/
+
+# Generated audio datasets
+datasets/
+
+# Python cache
+**/__pycache__/
+*.pyc
+*.pyo
+
+# Checkpoint files (download separately, do not commit)
+*.pth
+*.safetensors
+
+# Environment variables and secrets
+.env
+
+# Jupyter notebook outputs
+*.ipynb_checkpoints/
+.ipynb_checkpoints/
+
+# OS artifacts
+.DS_Store
+Thumbs.db

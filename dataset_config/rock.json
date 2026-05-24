@@ -1,0 +1,19 @@
+{
+    "root_dir": "datasets/rock",
+    "num_samples": 1000,
+    "audio_len": -1,
+    "reference_prompt": [
+        "a typical rock music",
+        "Low quality"
+    ],
+    "training_labels": [
+        [
+            [
+                "a music piece",
+                [
+                    "rock"
+                ]
+            ]
+        ]
+    ]
+}
