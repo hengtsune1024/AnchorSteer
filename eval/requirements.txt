@@ -1,0 +1,7 @@
+wheel
+numpy
+soundfile
+librosa
+torch 
+lpips
+laion_clap

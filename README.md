@@ -195,6 +195,11 @@ Expected outputs in `exps/rock-transformer/`:
 
 ---
 
+## Evaluation
+
+See [`eval/README.md`](eval/README.md) for setup and usage. The evaluator computes CLAP, LPIPS, and Chroma scores for original and edited audio.
+
+---
 
 ## Repository layout
 
@@ -206,6 +211,7 @@ AnchorSteer/
 ├── requirements.txt
 ├── diffusers/              # Pinned local fork of huggingface/diffusers (0.37.0.dev0)
 ├── dataset_config/         # Concept JSON configs
+├── eval/                   # Evaluation scripts (see eval/README.md)
 ├── models/                 # AnchorSteer core modules
 │   ├── __init__.py
 │   ├── controller.py       # Vector / Transformer Controller
