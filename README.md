@@ -1,5 +1,32 @@
 # AnchorSteer: Self-Discovered Concept Injection for Structure-Preserving Music Editing
 
+<p align="center">
+  <a href="https://arxiv.org/abs/2605.31053">
+    <img src="https://img.shields.io/badge/arXiv-2605.31053-b31b1b.svg" alt="arXiv">
+  </a>
+  <a href="https://huggingface.co/heng1024/AnchorSteer-weights">
+    <img src="https://img.shields.io/badge/HuggingFace-Weights-yellow.svg" alt="Hugging Face">
+  </a>
+  <a href="https://brianchen1120.github.io/project/anchorsteer/">
+    <img src="https://img.shields.io/badge/Demo-Website-blue.svg" alt="Demo">
+  </a>
+</p>
+
+<p align="center">
+  <strong>Chih-Heng Chang</strong><sup>1</sup>,
+  <strong>Keng-Seng Ho</strong><sup>1</sup>,
+  <strong>Chih-Yu Tsai</strong><sup>1</sup>,
+  <strong>Kuan-Lin Chen</strong><sup>1</sup>,
+  <strong>Yi-Hsuan Yang</strong><sup>2</sup>,
+  <strong>Jian-Jiun Ding</strong><sup>1,*</sup>
+</p>
+
+<p align="center">
+  <sup>1</sup>Graduate Institute of Communication Engineering, National Taiwan University<br>
+  <sup>2</sup>Artificial Intelligence Center of Research Excellence, National Taiwan University<br>
+  <sup>*</sup>Corresponding author
+</p>
+
 ## Abstract
 
 Controllable music editing is to modify high-level attributes while strictly preserving rhythmic and melodic structures. However, this task is challenged by a semantic-structural entanglement: steering methods often degrade structure to achieve editing performance, while structural adaptors suppress semantic responsiveness. We propose **AnchorSteer**, a framework that disentangles this tension by coupling structural anchoring with self-discovered semantic steering. The proposed approach probes internal representations to extract interpretable, label-free concept vectors via a self-supervised reconstruction objective, isolating attributes without curated data. During editing, these portable, plug-and-play concept vectors are injected into diffusion hidden manifolds while a structural adaptor enforces consistency. Variants for unconditioned and conditioned injections are provided to balance robustness and semantic strength. Experiments on ZoME-Bench and subjective tests show that the proposed framework outperforms both steering-only and anchoring-only baselines, enabling significant semantic transformations with high-fidelity structural preservation.
