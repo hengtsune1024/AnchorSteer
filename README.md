@@ -279,5 +279,5 @@ If you use AnchorSteer in your research, please cite:
 ---
 
 ## License
-
+ 
 This project is released under the MIT License (see `LICENSE`). The MuseControlLite component (`MuseControlLite/`) is included under its own license; see `MuseControlLite/LICENSE` for details.
